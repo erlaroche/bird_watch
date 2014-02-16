@@ -6,6 +6,11 @@ class ClipsController < ApplicationController
   def new
   end
 
+  def create
+    #to see what is submitted in the form
+    render text: params[:clip].inspect
+  end
+
   def edit
   end
 
