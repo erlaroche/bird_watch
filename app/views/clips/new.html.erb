@@ -1,0 +1,17 @@
+<h1>New Bird Post</h1>
+
+<%= form_for :clip do |x| %>
+  <p>
+    <%= x.label :title %><br>
+    <%= x.text_field :title %>
+  </p>
+
+  <p>
+    <%= x.label :text %><br>
+    <%= x.text_field :title %>
+  </p>
+
+  <p>
+    <%= x.submit %>
+  </p>
+<% end %>

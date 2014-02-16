@@ -1,4 +1,14 @@
 class ClipsController < ApplicationController
+
+  def index
+  end
+
+  def new
+  end
+
+  def edit
+  end
+
   def show_mockingbird
     @title = "Mockingbird"
     @short = "Mockingbirds are a group of New World passerine birds from the Mimidae family."
