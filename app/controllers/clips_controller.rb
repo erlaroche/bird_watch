@@ -11,6 +11,13 @@ class ClipsController < ApplicationController
     @description1 = "The Black-crested Titmouse, found from central and southern Texas southwards, was included as a subspecies but is now considered a separate species B. atricristatus."
     @description2 = "These birds have grey upperparts and white underparts with a white face, a grey crest, a dark forehead and a short stout bill; they have rust-coloured flanks. The song is usually described as a whistled peter-peter-peter. They make a variety of different sounds, most having a similar tone quality."
     @description3 = "The habitat is deciduous and mixed woods as well as gardens, parks and shrubland in the eastern United States; they barely range into southeastern Canada in the Great Lakes region. They are all-year residents in the area effectively circumscribed by the Great Plains, the Great Lakes, the Gulf of Mexico and the Atlantic Ocean. The range is expanding northwards, possibly due to increased availability of winter food at bird feeders. The birds are nowadays resident all year even in rural Ohio where there are few bird feeders, while it was noted around 1905 that many birds from these areas migrated south in winter."
+  end
 
+  def show_bluejay
+    @title = "Blue Jay"
+    @short = "The Blue Jay (Cyanocitta cristata) is a passerine bird in the family Corvidae, native to North America. "
+    @description1 = "It is resident through most of eastern and central United States and southern Canada, although western populations may be migratory. It breeds in both deciduous and coniferous forests, and is common near and in residential areas. It is predominately blue with a white chest and underparts, and a blue crest. It has a black, U-shaped collar around its neck and a black border behind the crest. Sexes are similar in size and plumage, and plumage does not vary throughout the year. Four subspecies of the Blue Jay are recognized."
+    @description2 = "The Blue Jay mainly feeds on nuts and seeds such as acorns, soft fruits, arthropods, and occasionally small vertebrates. It typically gleans food from trees, shrubs, and the ground, though it sometimes hawks insects from the air. It builds an open cup nest in the branches of a tree, which both sexes participate in constructing. The clutch can contain two to seven eggs, which are blueish or light brown with brown spots. Young are altricial, and are brooded by the female for 8–12 days after hatching. They may remain with their parents for one to two months."
+    @description3 = "The bird's name derives from its noisy, garrulous nature. It is sometimes called a 'jaybird' "
   end
 end
