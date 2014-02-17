@@ -1,3 +1,15 @@
-<h1>All Birds</h1>
+<h1>All Bird Entries</h1>
  
-
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @clips.each do |clip| %>
+    <tr>
+      <td><%= clip.title %></td>
+      <td><%= clip.text %></td>
+    </tr>
+  <% end %>
+</table>

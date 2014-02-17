@@ -31,6 +31,7 @@ class ClipsController < ApplicationController
   end
 
   def index
+    @clips = Clip.all
   end
 
   def edit
