@@ -23,9 +23,6 @@ class ClipsController < ApplicationController
   end
 
   #CRUD 
-  def new
-  end
-
   def show
     @clip = Clip.find(params[:id])
   end
@@ -37,12 +34,18 @@ class ClipsController < ApplicationController
   def edit
   end
 
- #creates a new bird entry
+  def new
+    @clip = Clip.new
+  end
+   
   def create
-   @clip = Clip.new(clip_params)
-
-   @clip.save
-   redirect_to @clip
+    @clip = Clip.new(params[:clip].permit(:title, :text))
+   
+    if @clip.save
+      redirect_to @clip
+    else
+      render 'new'
+    end
   end
 
   private
