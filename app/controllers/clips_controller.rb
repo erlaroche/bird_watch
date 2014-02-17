@@ -1,19 +1,5 @@
 class ClipsController < ApplicationController
 
-  def index
-  end
-
-  def new
-  end
-
-  def create
-    #to see what is submitted in the form
-    render text: params[:clip].inspect
-  end
-
-  def edit
-  end
-
   def show_mockingbird
     @title = "Mockingbird"
     @short = "Mockingbirds are a group of New World passerine birds from the Mimidae family."
@@ -34,5 +20,32 @@ class ClipsController < ApplicationController
     @description1 = "It is resident through most of eastern and central United States and southern Canada, although western populations may be migratory. It breeds in both deciduous and coniferous forests, and is common near and in residential areas. It is predominately blue with a white chest and underparts, and a blue crest. It has a black, U-shaped collar around its neck and a black border behind the crest. Sexes are similar in size and plumage, and plumage does not vary throughout the year. Four subspecies of the Blue Jay are recognized."
     @description2 = "The Blue Jay mainly feeds on nuts and seeds such as acorns, soft fruits, arthropods, and occasionally small vertebrates. It typically gleans food from trees, shrubs, and the ground, though it sometimes hawks insects from the air. It builds an open cup nest in the branches of a tree, which both sexes participate in constructing. The clutch can contain two to seven eggs, which are blueish or light brown with brown spots. Young are altricial, and are brooded by the female for 8–12 days after hatching. They may remain with their parents for one to two months."
     @description3 = "The bird's name derives from its noisy, garrulous nature. It is sometimes called a 'jaybird' "
+  end
+
+  #CRUD 
+  def new
+  end
+
+  def show
+    @clip = Clip.find(params[:id])
+  end
+
+  def index
+  end
+
+  def edit
+  end
+
+ #creates a new bird entry
+  def create
+   @clip = Clip.new(clip_params)
+
+   @clip.save
+   redirect_to @clip
+  end
+
+  private
+  def clip_params
+    params.require(:clip).permit(:title, :text, :picture)
   end
 end
