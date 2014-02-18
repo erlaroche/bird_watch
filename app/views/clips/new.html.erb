@@ -1,6 +1,18 @@
 <h1>New Bird Entry</h1>
 
 <%= form_for :clip, url: clips_path do |x| %>
+<!-- throw an error if no title or no text in clip entry -->
+<% if @clip.errors.any? %>
+<div id = "error_explanation" %>
+  <h2><%= pluralize(@clip.errors.count, "error") %> prohibited this post from being saved:</h2>
+  <ul>
+    <% @clip.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
   <p>
     <%= x.label :title %><br>
     <%= x.text_field :title %>
