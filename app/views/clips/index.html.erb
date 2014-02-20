@@ -4,12 +4,16 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th></th>
+    <th></th>
   </tr>
  
   <% @clips.each do |clip| %>
     <tr>
       <td><%= clip.title %></td>
       <td><%= clip.text %></td>
+      <td><%= link_to 'View', clip %></td>
+      <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
     </tr>
   <% end %>
 </table>

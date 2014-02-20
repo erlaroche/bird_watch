@@ -32,6 +32,17 @@ class ClipsController < ApplicationController
   end
 
   def edit
+    @clip = Clip.find(params[:id])
+  end
+
+  def update
+    @clip = Clip.find(params[:id])
+   
+    if @clip.update(params[:clip].permit(:title, :text))
+      redirect_to @clip
+    else
+      render 'edit'
+    end
   end
 
   def new
