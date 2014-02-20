@@ -48,6 +48,13 @@ class ClipsController < ApplicationController
   def new
     @clip = Clip.new
   end
+  
+  def destroy
+    @clip = Clip.find(params[:id])
+    @clip.destroy
+
+    redirect_to clips_path
+  end
    
   def create
     @clip = Clip.new(params[:clip].permit(:title, :text))
