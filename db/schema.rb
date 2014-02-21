@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221034634) do
+ActiveRecord::Schema.define(version: 20140221161412) do
 
   create_table "clips", force: true do |t|
     t.string   "title"
@@ -36,5 +36,15 @@ ActiveRecord::Schema.define(version: 20140221034634) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "remarks", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "clip_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "remarks", ["clip_id"], name: "index_remarks_on_clip_id"
 
 end

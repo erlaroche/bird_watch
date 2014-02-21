@@ -1,7 +1,10 @@
 BirdWatch::Application.routes.draw do
   get "welcome/index"
   # get "<url-slug>" => "controller_name#action"
-  resources :clips
+  resources :clips do
+    resources :remarks
+  end
+  
   resources :movies do
     resources :comments
   end
