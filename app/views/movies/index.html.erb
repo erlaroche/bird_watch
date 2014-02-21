@@ -1,0 +1,24 @@
+<h1>All Documentaries</h1>
+ 
+ <%= link_to 'New Documenary', new_movie_path %>
+ <br></br>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.text %></td>
+      <td><%= link_to 'Show', movie %></td>
+      <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+      <td><%= link_to 'Destroy', movie_path(movie), method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<%= link_to "Welcome Page", controller: "welcome" %>

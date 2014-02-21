@@ -1,0 +1,9 @@
+<h1>New Bird Entry</h1>
+
+<%= form_for :clip, url: clips_path do |x| %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', clips_path %>
+<%= link_to "Welcome Page", controller: "welcome" %>
+<% end %>

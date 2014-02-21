@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# Use hirb for viewing databases in console
+gem "hirb"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
