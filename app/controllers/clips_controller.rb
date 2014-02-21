@@ -1,5 +1,8 @@
 class ClipsController < ApplicationController
 
+  #authentication for updating and deleting entries
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
   def show_mockingbird
     @title = "Mockingbird"
     @short = "Mockingbirds are a group of New World passerine birds from the Mimidae family."
@@ -22,9 +25,9 @@ class ClipsController < ApplicationController
     @description3 = "The bird's name derives from its noisy, garrulous nature. It is sometimes called a 'jaybird' "
   end
 
-  #CRUD and authentication
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  #CRUD
   
+
   def show
     @clip = Clip.find(params[:id])
   end
