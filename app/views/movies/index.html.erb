@@ -1,5 +1,8 @@
 <h1>All Documentaries</h1>
  
+ <%= link_to 'New Documenary', new_movie_path %>
+ <br></br>
+ 
 <table>
   <tr>
     <th>Title</th>
@@ -10,9 +13,11 @@
     <tr>
       <td><%= movie.title %></td>
       <td><%= movie.text %></td>
+      <td><%= link_to 'Show', movie %></td>
+          <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
     </tr>
   <% end %>
 </table>
 
-<%= link_to 'New Documenary', new_movie_path %>
+
 <%= link_to "Welcome Page", controller: "welcome" %>

@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
   end
 
   def new
+    @movie = Movie.new
   end
 
   def index
@@ -17,11 +18,28 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
-  def create
-    @movie = Movie.new(movie_params)
+  def edit
+    @movie = Movie.find(params[:id])
+  end
 
-    @movie.save
-    redirect_to @movie 
+  def update
+    @movie = Movie.find(params[:id])
+
+    if @movie.update(params[:movie].permit(:title, :text))
+      redirect_to @movie
+    else
+      render 'edit'
+    end
+  end
+
+  def create
+    @movie = Movie.new(params[:movie].permit(:title, :text))
+
+    if @movie.save
+      redirect_to @movie
+    else
+      render 'new'
+    end 
   end
 
   private
