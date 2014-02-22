@@ -1,4 +1,5 @@
 BirdWatch::Application.routes.draw do
+  devise_for :users
   get "welcome/index"
   # get "<url-slug>" => "controller_name#action"
   resources :clips do

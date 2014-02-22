@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
+
+#Use foundation for mobily responsive sight
+gem 'foundation-rails'
+
+#add devise for authentication
+gem 'devise'
+
 # Use hirb for viewing databases in console
 gem "hirb"
 
