@@ -3,6 +3,10 @@ class ClipsController < ApplicationController
   #authentication for updating and deleting entries
   http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
+  def show_all
+    @clip = Clip.all
+  end
+  
   def show_mockingbird
     @title = "Mockingbird"
     @short = "Mockingbirds are a group of New World passerine birds from the Mimidae family."
