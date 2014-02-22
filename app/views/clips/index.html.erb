@@ -1,29 +1,34 @@
-<h1>All Bird Entries</h1>
+<div class="full-width-row-two">
+  
+  <div class="large-4 medium-6 small-10 small-centered columns">
+    <h1>All Bird Entries</h1>
 
-<%= link_to 'New Entry', new_clip_path %>
-<br></br>
+    <%= link_to 'New Entry', new_clip_path %>
+    <br></br>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-    <th></th>
-  </tr>
- 
-  <% @clips.each do |clip| %>
-    <tr>
-      <td><%= clip.title %></td>
-      <td><%= clip.text %></td>
-      <td><%= link_to 'View', clip %></td>
-      <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
-      <td><%= link_to 'Destroy', clip_path(clip),
-        method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></td>
-    </tr>
-  <% end %>
-</table>
-<br>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th></th>
+        <th></th>
+      </tr>
+     
+      <% @clips.each do |clip| %>
+        <tr>
+          <td><%= clip.title %></td>
+          <td><%= clip.text %></td>
+          <td><%= link_to 'View', clip %></td>
+          <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
+          <td><%= link_to 'Destroy', clip_path(clip),
+            method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+    <br>
 
 
-<%= link_to "Welcome Page", controller: "welcome" %>
-<br>
+    <%= link_to "Welcome Page", controller: "welcome" %>
+    <br>
+  </div>
+</div>

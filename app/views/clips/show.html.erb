@@ -1,22 +1,27 @@
-<p>
-  <strong>Title:</strong>
-  <%= @clip.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @clip.text %>
-</p>
+<div class="full-width-row-two">
+  
+  <div class="large-4 medium-6 small-10 small-centered columns">
+    <p>
+      <strong>Title:</strong>
+      <%= @clip.title %>
+    </p>
+     
+    <p>
+      <strong>Text:</strong>
+      <%= @clip.text %>
+    </p>
 
-<h2>Comments</h2>
-<%= render @clip.remarks %>
+    <h2>Comments</h2>
+    <%= render @clip.remarks %>
 
 
-<h2>Add a comment:</h2>
-<%= render "remarks/form" %>
+    <h2>Add a comment:</h2>
+    <%= render "remarks/form" %>
 
-<%= link_to 'Back', clips_path %>
-<%= link_to 'Edit', edit_clip_path(@clip) %>
-<%= link_to "Welcome Page", controller: "welcome" %>
+    <%= link_to 'Back', clips_path %>
+    <%= link_to 'Edit', edit_clip_path(@clip) %>
+    <%= link_to "Welcome Page", controller: "welcome" %>
+  </div>
+</div>
 
 

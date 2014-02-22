@@ -1,9 +1,14 @@
-<h1>New Bird Entry</h1>
+<div class="full-width-row-two">
+  
+  <div class="large-4 medium-6 small-10 small-centered columns">
+    <h1>New Bird Entry</h1>
 
-<%= form_for :clip, url: clips_path do |x| %>
+    <%= form_for :clip, url: clips_path do |x| %>
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<%= link_to 'Back', clips_path %>
-<%= link_to "Welcome Page", controller: "welcome" %>
-<% end %>
+    <%= link_to 'Back', clips_path %>
+    <%= link_to "Welcome Page", controller: "welcome" %>
+    <% end %>
+  </div>
+</div>

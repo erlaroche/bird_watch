@@ -1,14 +1,19 @@
-<h1>Welcome to Your Bird Diary</h1>
+<div class="full-width-row-two">
+  
+  <div class="large-4 medium-6 small-10 small-centered columns">
+    <h1>Welcome to Your Bird Diary</h1>
 
-<p>A place to document and track your bird watching finds.</p>
+    <p>A place to document and track your bird watching finds.</p>
 
-<%= link_to "Bird Entries", controller: "clips" %>
-<br>
+    <h3><%= link_to "Bird Entries", controller: "clips" %></h3>
+    <br>
 
-<br>
-<%= link_to "Documentaries", controller: "movies" %>
-<br>
+    <br>
+    <h3><%= link_to "Documentaries", controller: "movies" %></h3>
+    <br>
 
-<br></br>
-<%= link_to "Featured Birds", clips_all_path %>
+    <br></br>
+    <h3><%= link_to "Featured Birds", clips_all_path %></h3>
+  </div>
+</div>
 
