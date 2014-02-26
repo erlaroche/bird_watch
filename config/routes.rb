@@ -10,14 +10,6 @@ BirdWatch::Application.routes.draw do
   resources :clips do
     resources :remarks
   end
-  
-  resources :movies do
-    resources :comments
-  end
 
   root "welcome#index"
-
-  
-
-  get "/movies/nationalgeographicdocumentary" => "movies#show_nationalgeographicdocumentary"
 end
