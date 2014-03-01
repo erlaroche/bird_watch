@@ -53,7 +53,7 @@ class ClipsController < ApplicationController
   def update
     @clip = Clip.find(params[:id])
    
-    if @clip.update(params[:clip].permit(:title, :text))
+    if @clip.update(params[:clip].permit(:title, :youtube_id, :text))
       redirect_to @clip
     else
       render 'edit'
@@ -72,7 +72,7 @@ class ClipsController < ApplicationController
   end
    
   def create
-    @clip = Clip.new(params[:clip].permit(:title, :text))
+    @clip = Clip.new(params[:clip].permit(:title, :youtube_id, :text))
    
     if @clip.save
       redirect_to @clip
@@ -83,6 +83,6 @@ class ClipsController < ApplicationController
 
   private
   def clip_params
-    params.require(:clip).permit(:title, :text, :picture)
+    params.require(:clip).permit(:title, :youtube_id, :text)
   end
 end

@@ -9,14 +9,15 @@
     <table>
       <tr>
         <th>Title</th>
+        <th>You Tube Id</th>
         <th>Text</th>
-        <th></th>
         <th></th>
       </tr>
      
       <% @clips.each do |clip| %>
         <tr>
           <td><%= clip.title %></td>
+          <td><%= clip.youtube_id %></td>
           <td><%= clip.text %></td>
           <td><%= link_to 'View', clip %></td>
           <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
