@@ -1,7 +1,7 @@
 class ClipsController < ApplicationController
 
   #authentication for updating and deleting entries
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  # http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
   def show_all
     @clip = Clip.all

@@ -1,6 +1,7 @@
 class RemarksController < ApplicationController
   
-  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+  #authentication for updating and deleting entries
+  # http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
 
   def create
     @clip = Clip.find(params[:clip_id])
