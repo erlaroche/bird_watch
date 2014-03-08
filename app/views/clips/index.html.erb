@@ -6,27 +6,31 @@
     <%= link_to 'New Entry', new_clip_path %>
     <br></br>
 
-    <table>
-      <tr>
-        <th>Title</th>
-        <th>You Tube Id</th>
-        <th>Text</th>
-        <th></th>
-      </tr>
-     
-      <% @clips.each do |clip| %>
+
+    <div class = "center">
+      <table align = "center">
         <tr>
-          <td><%= clip.title %></td>
-          <td><%= clip.youtube_id %></td>
-          <td><%= clip.text %></td>
-          <td><%= link_to 'View', clip %></td>
-          <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
-          <td><%= link_to 'Destroy', clip_path(clip),
-            method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></td>
+          <th>Title</th>
+          <th>You Tube Id</th>
+          <th>Text</th>
+          <th></th>
         </tr>
-      <% end %>
-    </table>
-    <br>
+       
+
+        <% @clips.each do |clip| %>
+          <tr>
+            <td><%= clip.title %></td>
+            <td><%= clip.youtube_id %></td>
+            <td><%= clip.text %></td>
+            <td><%= link_to 'View', clip %></td>
+            <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
+            <td><%= link_to 'Destroy', clip_path(clip),
+              method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <br></br>
 
 
     <%= link_to "Welcome Page", controller: "welcome" %>
