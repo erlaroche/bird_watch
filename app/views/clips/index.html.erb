@@ -1,39 +1,38 @@
 <div class="full-width-row-two">
   
-  <div class="large-4 medium-6 small-10 small-centered columns">
+  <div class="large-6 medium-6 small-10 small-centered columns">
     <h1>All Bird Entries</h1>
 
-    <%= link_to 'New Entry', new_clip_path %>
+    <div class = "button"><%= link_to 'New Entry', new_clip_path %></div>
     <br></br>
 
 
-    <div class = "center">
-      <table align = "center">
-        <tr>
-          <th>Title</th>
-          <th>You Tube Id</th>
-          <th>Text</th>
-          <th></th>
-        </tr>
+    <div>
+      
+      <h2>ENTRIES</h2>
        
 
-        <% @clips.each do |clip| %>
-          <tr>
-            <td><%= clip.title %></td>
-            <td><%= clip.youtube_id %></td>
-            <td><%= clip.text %></td>
-            <td><%= link_to 'View', clip %></td>
-            <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
-            <td><%= link_to 'Destroy', clip_path(clip),
-              method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></td>
-          </tr>
+        <div class = "entries"><% @clips.each do |clip| %>
+          <br></br>
+          <br></br>
+           <h3> <%= clip.title %> </h3>
+             <h4><%= clip.youtube_id %> </h4>
+             <h4> <%= clip.text %> </h4>
+             <br></br>
+
+             <h4><%= link_to 'View', clip %>
+             <%= link_to 'Edit', edit_clip_path(clip) %>
+             <%= link_to 'Destroy', clip_path(clip),
+              method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></h4>
+          
         <% end %>
-      </table>
+      </div>
+   
     </div>
     <br></br>
 
 
-    <%= link_to "Welcome Page", controller: "welcome" %>
+    <h4 class = "button"><%= link_to "HOME", controller: "welcome" %></h4>
     <br>
   </div>
 </div>
