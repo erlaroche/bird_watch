@@ -42,6 +42,10 @@ class ClipsController < ApplicationController
     @clip = Clip.find(params[:id])
   end
 
+  def new
+    @clip = Clip.new
+  end
+
   def index
     @clips = Clip.all
   end
@@ -60,10 +64,6 @@ class ClipsController < ApplicationController
     end
   end
 
-  def new
-    @clip = Clip.new
-  end
-  
   def destroy
     @clip = Clip.find(params[:id])
     @clip.destroy
