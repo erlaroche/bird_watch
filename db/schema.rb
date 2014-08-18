@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20140301172159) do
     t.datetime "updated_at"
   end
 
-
   create_table "remarks", force: true do |t|
     t.string   "commenter"
     t.text     "body"
