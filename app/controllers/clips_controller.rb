@@ -36,8 +36,6 @@ class ClipsController < ApplicationController
   end
 
   #CRUD
-  
-
   def show
     @clip = Clip.find(params[:id])
   end
@@ -72,14 +70,16 @@ class ClipsController < ApplicationController
   end
    
   def create
-    @clip = Clip.new(params[:clip].permit(:title, :youtube_id, :text))
+    @clip = Clip.new(clip_params)
    
     if @clip.save
-      redirect_to @clip
+      redirect_to clips_path
     else
       render 'new'
     end
   end
+
+  
 
   private
   def clip_params

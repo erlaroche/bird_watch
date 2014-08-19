@@ -15,8 +15,9 @@
         <div class = "entries"><% @clips.each do |clip| %>
           <br></br>
           <br></br>
+
            <h3> <%= clip.title %> </h3>
-             <h4><%= clip.youtube_id %> </h4>
+            
              <h4> <%= clip.text %> </h4>
              <br></br>
 
@@ -24,7 +25,6 @@
              <%= link_to 'Edit', edit_clip_path(clip) %>
              <%= link_to 'Destroy', clip_path(clip),
               method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></h4>
-          
         <% end %>
       </div>
    

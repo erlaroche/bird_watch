@@ -4,9 +4,11 @@
     <h1>Editing post</h1>
  
     <%= render 'form' %>
-     
-    <%= link_to 'Back', clips_path %>
-    <%= link_to "Welcome Page", controller: "welcome" %>
+    
+    <div class= "large-12 medium-6 small-3 small centered columns"> 
+	    <div ><%= button_to 'Back', clips_path, :class=> 'back_button', :method => :get %></div></div>
+	    <div class="welcome"><%= button_to "Home", root_path, :class=> 'welcome_button', :method => :get %><div>
+    </div>
   </div>
 </div>
 
