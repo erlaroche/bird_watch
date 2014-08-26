@@ -14,6 +14,8 @@
  *= require_tree .
  */
 
+ @import "bootstrap";
+
 .full-width-row-two {
  width: 100%;
  background: url( asset-path('assets/blurred_background3.jpeg', image) ) no-repeat;

@@ -12,20 +12,20 @@
     </div>
     <% end %>
     <p>
-    <span class= "help-block">The title of your entry</span>
+    <h3>The title of your entry</h3>
       <%= f.label :title %><br>
       <%= f.text_field :title %>
       
     </p>
 
     <p>
-    <span class= "help-block">The 'share' link from your youtube video.</span>
+    <h3>The link from your youtube video.</h3>
       <%= f.label :youtube_id %><br>
-      <%= f.url_field :youtube_id %>
+      <%= f.url_field :youtube_id, class: 'form-control', required: true %>
     </p>
    
     <p>
-    <span class= "help-block">The description of your entry</span>
+    <h3>The description of your entry</h3>
       <%= f.label :text %><br>
       <%= f.text_area :text %>
     </p>

@@ -46,6 +46,9 @@ class ClipsController < ApplicationController
 
   def index
     @clips = Clip.all
+    @clip = Clip.select(:youtube_id)
+    
+
   end
 
   def edit
