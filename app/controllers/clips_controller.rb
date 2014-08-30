@@ -36,19 +36,16 @@ class ClipsController < ApplicationController
   end
 
   #CRUD
-  def show
-    @clip = Clip.find(params[:id])
-  end
-
   def new
     @clip = Clip.new
   end
 
   def index
     @clips = Clip.all
-    @clip = Clip.select(:youtube_id)
-    
+  end
 
+  def show
+    @clip = Clip.find(params[:id])
   end
 
   def edit
@@ -78,6 +75,7 @@ class ClipsController < ApplicationController
     if @clip.save
       redirect_to clips_path
     else
+      # Could throw an error here
       render 'new'
     end
   end

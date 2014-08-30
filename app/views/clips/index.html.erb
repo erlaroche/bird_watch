@@ -1,39 +1,37 @@
 <div class="full-width-row-two">
-  
-  <div class="large-6 medium-6 small-10 small-centered columns">
+ <div class="large-6 medium-6 small-10 small-centered columns">
     <h1>All Bird Entries</h1>
-
     <div class = "button"><%= link_to 'New Entry', new_clip_path %></div>
     <br></br>
-
-
-    <div>
-      
-      <h2>ENTRIES</h2>
-       
-
-        <div class = "entries"><% @clips.each do |clip| %>
-          <br></br>
-          <br></br>
-           <h3> <%= clip.title %> </h3>
-             <iframe width="560" height="349" src="<%= "http://www.youtube.com/embed/" + "@clip" %>"></iframe>
-             <!-- <iframe width="420" height="315" src="//www.youtube.com/embed/<%= clip.youtube_id %>" frameborder="0" allowfullscreen></iframe> -->
-             <h4> <%= clip.text %> </h4>
-             <br></br>
-
-             <h4><%= link_to 'View', clip %>
-             <%= link_to 'Edit', edit_clip_path(clip) %>
-             <%= link_to 'Destroy', clip_path(clip),
-              method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></h4>
-          
+    <div class = "entries">
+      <h2>ENTRIES</h2>            
+      <div class = "entries">
+        <% @clips.each do |clip| %>
+        <br></br>
+        <br></br>
+        <h3> <%= clip.title %> </h3>
+        <h3> <%= clip.youtube_id %> </h3>
+        <h4> <%= clip.text %> </h4>
+        <br></br>
+        <h4><%= link_to 'View', clip %>
+        <%= link_to 'Edit', edit_clip_path(clip) %>
+        <%= link_to 'Destroy', clip_path(clip),
+            method: :delete, data: { confirm: 'Are you sure you would like to delete this entry?' } %></h4>
         <% end %>
       </div>
-   
     </div>
     <br></br>
-
-
     <h4 class = "button"><%= link_to "HOME", controller: "welcome" %></h4>
     <br>
   </div>
+
+  <div style="background-color:gray; width:300px; border-radius: 2px, solid, black">
+    <h3>All the Clips!</h3>
+      <% @clips.each do |clip| %>
+        <li><%= link_to clip.title, clip_path(clip.id) %></li>
+      <% end %>
+  </div>
 </div>
+
+
+
