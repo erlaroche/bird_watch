@@ -11,7 +11,7 @@
         <br></br>
         <h3> <%= link_to clip.title, clip_url(clip.id) %> </h3>
         <h5> <%= clip.youtube_id %> </h5>
-        <h4> <%= clip.text %> </h4>
+        <h5> <%= clip.snippet %> </h5>
         <br></br>
         <h4><%= link_to 'View', clip %>
         <%= link_to 'Edit', edit_clip_path(clip) %>
