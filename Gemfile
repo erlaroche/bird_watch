@@ -39,8 +39,7 @@ group :doc do
 end
 
 # render youtube videos
-gem 'bootstrap-sass', '~> 3.1.1.0'
-gem 'youtube_it', '~> 2.4.0'
+gem 'unirest'
 
 
 # Use ActiveModel has_secure_password
