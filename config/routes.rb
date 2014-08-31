@@ -12,5 +12,7 @@ BirdWatch::Application.routes.draw do
     resources :remarks
   end
 
+  resources :users
+
   root "welcome#index"
 end
