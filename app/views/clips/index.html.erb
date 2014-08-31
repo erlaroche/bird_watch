@@ -9,7 +9,7 @@
         <% @clips.each do |clip| %>
         <br></br>
         <br></br>
-        <h3> <%= clip.title %> </h3>
+        <h3> <%= link_to clip.title, clip_url(clip.id) %> </h3>
         <h5> <%= clip.youtube_id %> </h5>
         <h4> <%= clip.text %> </h4>
         <br></br>
