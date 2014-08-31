@@ -5,3 +5,13 @@
 </br>
 <strong>Email:</strong>
 <%= @user.email %>
+</br>
+</br>
+</br>
+
+<strong><%= @user.name %>'s Videos</strong>
+</br>
+<ul><% @user.clips.each do |clip| %>
+  <li><%= link_to clip.title, clip %></li>
+  <p><%= clip.text %></p>
+<% end %></ul>
