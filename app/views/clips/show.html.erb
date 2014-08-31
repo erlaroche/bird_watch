@@ -7,12 +7,13 @@
     </p>
      
     <p>
-      <strong>youtube_id:</strong>
-      <%= @clip.youtube_id %>
+      <strong>Created By:</strong> 
+      <%= link_to "#{@clip.user.name}", @clip.user %> %>
+     <iframe width="420" height="315" src="//www.youtube.com/embed/<%= @clip.youtube_id %>" frameborder="0" allowfullscreen></iframe>
     </p>
 
     <p>
-      <strong>Text:</strong>
+      <strong>Description:</strong>
       <%= @clip.text %>
     </p>
 

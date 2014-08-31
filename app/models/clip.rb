@@ -8,7 +8,7 @@ class Clip < ActiveRecord::Base
 
   def youtube_query
      response = Unirest.get("https://www.googleapis.com/youtube/v3/videos?part=snippet%2C+statistics&id=020sZ0PY8ko&key={AIzaSyBt8CXXq__mHV3zy-PCw7SaFAgjre44nIA}")
-     self.description = response.body["items"][0]['snippet']['text']
+     self.text = response.body["items"][0]['snippet']['text']
      self.save
    end
 

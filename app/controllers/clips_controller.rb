@@ -42,6 +42,7 @@ class ClipsController < ApplicationController
 
   def index
     @clips = Clip.all
+    
   end
 
   def show
