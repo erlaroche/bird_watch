@@ -26,13 +26,6 @@
     <h4 class = "button"><%= link_to "HOME", controller: "welcome" %></h4>
     <br>
   </div>
-
-  <div style="background-color:gray; width:300px; border-radius: 2px, solid, black">
-    <h3>All the Clips!</h3>
-      <% @clips.each do |clip| %>
-        <li><%= link_to clip.title, clip_path(clip.id) %></li>
-      <% end %>
-  </div>
 </div>
 
 
