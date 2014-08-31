@@ -55,8 +55,8 @@ class ClipsController < ApplicationController
   def update
     @clip = Clip.find(params[:id])
    
-    if @clip.update(params[:clip].permit(:title, :youtube_id, :text))
-      redirect_to @clip
+    if @clip.update(clip_params)
+      redirect_to clips_path
     else
       render 'edit'
     end
@@ -71,7 +71,7 @@ class ClipsController < ApplicationController
    
   def create
     @clip = Clip.new(clip_params)
-   
+    @clip.user_id = current_user.id
     if @clip.save
       redirect_to clips_path
     else
