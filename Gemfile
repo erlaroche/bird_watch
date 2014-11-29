@@ -13,14 +13,14 @@ gem "hirb"
 gem 'rails', '4.0.2'
 
 # Use PostgreSQL for deploy heroku
-gem 'pg'
+# gem 'pg'
 
 # Add this for heroku for cool runnings on heroku
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
 # Use sqlite3 as the database for Active Record
 # NOTICE: removed for deploy to heroku
-# gem 'sqlite3'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
