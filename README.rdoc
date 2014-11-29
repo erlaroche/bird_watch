@@ -9,5 +9,4 @@ Bird Watch: An online bird watching diary where you can document your sightings 
 Configuration
 * 1) Clone down repo
 * 2) bundle
-* 3) Watch birds
 
