@@ -1,47 +1,15 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
 development:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: unicode
-  database: db/production.sqlite3
+  database: bird_watch-development
   pool: 5
-  port: 3000
+  port: 5432
   host: localhost
 
-# Use for deploy to heroku
-# development:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: myapp-test
-#   pool: 5
-#   port: 15432
-#   host: localhost
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: unicode
-  database: db/production.sqlite3
+  database: bird_watch-test
   pool: 5
-  port: 3000
+  port: 5432
   host: localhost
-
-# Use for deploy to heroku
-# test:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: myapp-test
-#   pool: 5
-#   port: 15432
-#   host: localhost
-
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
