@@ -4,7 +4,7 @@
 
 
    <h2>Log In</h2>
-   <p>Log in here if you already have a profile.  If not please register by <a herf= "https://birdwatchin.herokuapp.com/users/sign_up">signing up.</a></p>
+   <p>Log in here if you already have a profile.  If not please register by <%= link(:url => 'https://birdwatchin.herokuapp.com/users/sign_up', :text => 'Signing Up,'%></p>
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <div class = "email"><%= f.label :email %><br />
