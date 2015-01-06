@@ -2,6 +2,7 @@ BirdWatch::Application.routes.draw do
   devise_for :users
   get "welcome/index", :as => 'home'
   get "users/sign_up", :as => 'sign_up'
+  get "users/password/new", :as => 'password'
   
   # get "<url-slug>" => "controller_name#action"
   get "/clips/all" => "clips#show_all", :as => 'featured_birds'
