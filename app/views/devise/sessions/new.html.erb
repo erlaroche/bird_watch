@@ -1,26 +1,28 @@
-<div class="full-width-row">
-  
-  <div class="large-4 medium-6 small-10 small-centered columns">
+<div class="entries">
+  <div class="full-width-row">
+    
+    <div class="large-4 medium-6 small-10 small-centered columns">
 
 
-   <h2>Log In</h2>
-   <p>Log in here if you already have a profile.  If not please register by clicking the Sign Up link in the top left corner.</p>
+     <h2>Log In</h2>
+     <p>Log in here if you already have a profile.  If not please register by clicking the Sign Up link in the top left corner.</p>
 
-    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-    <div class = "email"><%= f.label :email %><br />
-    <%= f.email_field :email, :autofocus => true %></div>
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <div class = "email"><%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %></div>
 
-    <div class = "password"><%= f.label :password %><br />
-    <%= f.password_field :password %></div>
+      <div class = "password"><%= f.label :password %><br />
+      <%= f.password_field :password %></div>
 
-    <% if devise_mapping.rememberable? -%>
-      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-    <% end -%>
+      <% if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+      <% end -%>
 
-    <div><%= f.submit "Sign in", class: "button" %></div>
-    <% end %>
+      <div><%= f.submit "Sign in", class: "button" %></div>
+      <% end %>
 
-    <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
+    </div>
+   
   </div>
- 
 </div>
