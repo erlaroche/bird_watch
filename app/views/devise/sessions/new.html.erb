@@ -20,7 +20,8 @@
       <div><%= f.submit "Sign in", class: "button" %></div>
       <% end %>
 
-      <h4 class="button"><%= render "devise/shared/links" %></h4>
+      <h4><%= render "devise/shared/links" %></h4>
+      <%= link_to "Sign Up", sign_up_path %>
     </div>
   </div>
 </div>
